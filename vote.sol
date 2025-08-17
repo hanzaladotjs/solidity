@@ -40,4 +40,15 @@ contract Contract {
 		}
 		return Choices.No;
 	}
+    function changeVote(Choices choice ) external   {
+		for(uint i; i<votes.length; i++){
+			if(votes[i].voter == msg.sender){
+				if(votes[i].choice == Choices.No){
+					votes[i].choice = Choices.Yes;
+				}else{
+					votes[i].choice = Choices.No;
+				}
+			}
+		}
+	}
 }
