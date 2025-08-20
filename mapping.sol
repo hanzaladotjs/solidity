@@ -11,4 +11,7 @@ contract Contract {
 
 
     }
+function isMember ( address newAddress) external view returns(bool) {
+      return members[newAddress];
+    }
 }
